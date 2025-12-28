@@ -45,7 +45,7 @@ export default function RegisterPage() {
       } else {
         setError(data.message);
       }
-    } catch () {
+    } catch (_err) {
       setError("Network error. Please check if backend is running.");
     } finally {
       setLoading(false);
