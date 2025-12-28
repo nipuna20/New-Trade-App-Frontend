@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { CheckCircle, RefreshCw, ArrowLeft, Trophy, User, ArrowRight } from "lucide-react";
 
-const API_URL = "http://localhost:8080/api";
+const API_URL = "http://trading-platform-backend-production-bddd.up.railway.app/api";
 
 type MatchedOrder = {
   id: number;
