@@ -127,7 +127,7 @@ export default function ViewTablePage() {
       } else {
         setError(`Failed to fetch data: ${response.statusText}`);
       }
-    } catch () {
+    } catch (_err) {
       setError("Network error. Please check if backend is running.");
     } finally {
       setLoading(false);
