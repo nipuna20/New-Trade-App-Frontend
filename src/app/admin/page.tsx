@@ -58,7 +58,7 @@ type Order = {
   role: string; // 'buyer' or 'seller'
 };
 
-const API_URL = "http://localhost:8080/api";
+const API_URL = "http://trading-platform-backend-production-bddd.up.railway.app/api";
 
 export default function AdminAnalytics() {
   const router = useRouter();
