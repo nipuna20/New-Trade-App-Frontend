@@ -12,14 +12,14 @@ type Order = {
   trade_date: string;
   trade_time: string;
   transaction_type: number | string;
-  created_at?: string; // Made optional since we are removing it
+  created_at?: string; 
 };
 
-type TableData = Omit<Order, 'created_at'>[]; // Define TableData without created_at
+type TableData = Omit<Order, 'created_at'>[]; 
 
 export default function ViewTablePage() {
   const [tableName, setTableName] = useState("");
-  const [data, setData] = useState<TableData[]>([]); // Updated type
+  const [data, setData] = useState<TableData[]>([]); 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -111,11 +111,9 @@ export default function ViewTablePage() {
           }
         }
         
-        // Transform data: Remove created_at and format others
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        
         const transformedData = processedData.map((item: Order) => {
-          // Destructure to separate created_at from the rest
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+     
           const { created_at, ...rest } = item;
           
           return {
@@ -125,12 +123,11 @@ export default function ViewTablePage() {
           };
         });
         
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         setData(transformedData as any);
       } else {
         setError(`Failed to fetch data: ${response.statusText}`);
       }
-    } catch (err) {
+    } catch () {
       setError("Network error. Please check if backend is running.");
     } finally {
       setLoading(false);
@@ -216,7 +213,7 @@ export default function ViewTablePage() {
                     {Object.keys(data[0]).map((key) => (
                       <th
                         key={key}
-                        // ADDED 'capitalize' CLASS BELOW
+                 
                         className="px-4 py-3 text-left text-sm font-normal text-black capitalize"
                       >
                         {key.replace(/_/g, ' ')}
