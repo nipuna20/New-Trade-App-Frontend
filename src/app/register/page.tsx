@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { UserPlus, Mail, Lock, User, AlertCircle } from "lucide-react";
 
-const API_URL = "http://trading-platform-backend-production-bddd.up.railway.app/api";
+const API_URL = "https://trading-platform-backend-production-bddd.up.railway.app/api";
 
 export default function RegisterPage() {
   const router = useRouter();
