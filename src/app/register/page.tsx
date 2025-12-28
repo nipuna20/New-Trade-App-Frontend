@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { UserPlus, Mail, Lock, User, AlertCircle, CheckCircle } from "lucide-react";
+import { UserPlus, Mail, Lock, User, AlertCircle } from "lucide-react";
 
 const API_URL = "http://localhost:8080/api";
 
@@ -45,7 +45,7 @@ export default function RegisterPage() {
       } else {
         setError(data.message);
       }
-    } catch (err) {
+    } catch () {
       setError("Network error. Please check if backend is running.");
     } finally {
       setLoading(false);
