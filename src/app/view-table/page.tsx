@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Database, RefreshCw, ArrowLeft, Trophy } from "lucide-react";
 
-const API_URL = "http://localhost:8080/api";
+const API_URL = "http://trading-platform-backend-production-bddd.up.railway.app/api";
 
 type Order = {
   id: number;
