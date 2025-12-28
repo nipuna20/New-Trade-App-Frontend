@@ -13,7 +13,7 @@ type Project = {
   description: string;
 };
 
-const API_URL = "http://localhost:8080/api";
+const API_URL = "http://trading-platform-backend-production-bddd.up.railway.app/api";
 
 export default function Home() {
   const router = useRouter();
