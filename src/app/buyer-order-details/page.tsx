@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { ArrowLeft, RefreshCw, Package, Users, CheckCircle, Clock } from "lucide-react";
 
-const API_URL = "http://trading-platform-backend-production-bddd.up.railway.app/api";
+const API_URL = "https://trading-platform-backend-production-bddd.up.railway.app/api";
 
 type BuyerOrderHistory = {
   id: number;
