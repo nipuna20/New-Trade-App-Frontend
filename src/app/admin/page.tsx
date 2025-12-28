@@ -58,7 +58,7 @@ type Order = {
   role: string; // 'buyer' or 'seller'
 };
 
-const API_URL = "http://trading-platform-backend-production-bddd.up.railway.app/api";
+const API_URL = "https://trading-platform-backend-production-bddd.up.railway.app/api";
 
 export default function AdminAnalytics() {
   const router = useRouter();
